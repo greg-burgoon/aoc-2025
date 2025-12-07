@@ -12,7 +12,6 @@ const batteryBanks = fileContent
   .filter(line => line.length > 0);
 
 function getBiggestNumber(batteryBank) {
-    console.log('Looking for biggest number in :' + batteryBank);
     let biggestNumber = 0;
     let biggestNumberIndex = 0;
     batteryBank.split('').forEach((char, index) => {
@@ -42,7 +41,5 @@ batteryBanks.forEach(bank => {
     let joltage = parseInt(numbers.reduce((a, b) => a + b, ""));
     joltages.push(joltage);
 });
-
-console.log('Joltages:' + joltages);
 
 console.log('Joltage sum:' + joltages.reduce((a, b) => a + b, 0));
